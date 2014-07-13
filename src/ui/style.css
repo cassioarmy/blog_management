@@ -1,0 +1,11 @@
+.listbox{
+    /*box-shadow: 0 0 5px #333 inset;*/
+    border-style: solid;
+    border-color:#eee;
+    border-bottom-width: 1px;
+}
+
+.lblInfo {
+	background-color: #0099CC ;
+	color:#fff;
+}
