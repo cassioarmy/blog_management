@@ -27,7 +27,7 @@ map<int, string> BlogUtil::getBlogs() {
     
     
     
-//    delete resultado;
+    //delete resultado;
 }
 
 //http://www.cassiosousa.com.br/blog/xmlrpc.php

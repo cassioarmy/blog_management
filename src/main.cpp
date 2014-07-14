@@ -81,7 +81,7 @@ int main(int argc, char **argv) {
       //cout << Utils::getExecutablePath();
       //cout << Utils::getExecutableDirectory();
       
-   // BlogUtil blog("http://www.cassiosousa.com.br/blog/xmlrpc.php","user","pass");
+    //BlogUtil blog("http://www.cassiosousa.com.br/blog/xmlrpc.php","user","pass");
     //blog.getBlogs();
       return 0;
 }

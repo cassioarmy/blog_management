@@ -90,7 +90,19 @@ void MainWindow::loadComboBlogs() {
    this->comboBlogs.pack_start(selectedBlogModel.label);
    
    
-   //selectedBlog->add(this->comboBlogs);
+   Glib::RefPtr<Gtk::Toolbar> toolBar = Glib::RefPtr<Gtk::Toolbar>::cast_static( this->refBuilder->get_object("toolbar") );
+   
+   
+   cout << toolBar->get_name();
+   
+   Gtk::ToolItem* itemCombo = Gtk::manage(new Gtk::ToolItem());
+   itemCombo->add(this->comboBlogs);
+   
+   toolBar->append(*itemCombo);
+   itemCombo->rebuild_menu();
+   toolBar->rebuild_menu();
+   itemCombo->show();
+  // selectedBlog->add(this->comboBlogs);
    
    //selectedBlog->show_all_children();
    
