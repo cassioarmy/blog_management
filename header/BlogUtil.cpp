@@ -5,6 +5,8 @@
  * Created on July 12, 2014, 9:43 PM
  */
 
+#include <stdlib.h>
+
 #include "../header/BlogUtil.h"
 
 BlogUtil::BlogUtil(string blogUrl, string username, string password) {
@@ -25,8 +27,21 @@ map<int, string> BlogUtil::getBlogs() {
     
     xmlrpc_c::value resultado = call(parametros, "wp.getUsersBlogs");
     
+    map<int, string> result;
     
+    xmlrpc_c::carray arr = xmlrpc_c::value_array(resultado).cvalue();
+    xmlrpc_c::cstruct str;
     
+    int idBlog;
+    for(xmlrpc_c::carray::iterator it = arr.begin(); it != arr.end(); ++it){
+        
+        str = xmlrpc_c::value_struct( it->cValueP ).cvalue();        
+        idBlog = atoi( xmlrpc_c::value_string(str.at("blogid")).crlfValue().data());
+        
+        result.insert(pair<int,string>( idBlog ,xmlrpc_c::value_string( str.at("blogName"))));
+    }
+    
+    return result;
     //delete resultado;
 }
 

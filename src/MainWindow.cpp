@@ -93,7 +93,7 @@ void MainWindow::loadComboBlogs() {
         row[selectedBlogModel.id] = chave;
         
         
-        valor = valor.replace(valor.begin(),valor.end(),"&#039;","'");
+        //valor = valor.replace(valor.begin(),valor.end(),"&#039;","'");
         row[selectedBlogModel.label] = valor;
     }
     

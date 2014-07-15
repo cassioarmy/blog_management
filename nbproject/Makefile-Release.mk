@@ -61,11 +61,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/blog_management
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/blogmanagement
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/blog_management: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/blogmanagement: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/blog_management ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/blogmanagement ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/header/BlogUtil.o: header/BlogUtil.cpp 
 	${MKDIR} -p ${OBJECTDIR}/header
@@ -103,7 +103,7 @@ ${OBJECTDIR}/src/main.o: src/main.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/blog_management
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/blogmanagement
 
 # Subprojects
 .clean-subprojects:

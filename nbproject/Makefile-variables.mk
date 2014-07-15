@@ -17,8 +17,8 @@ CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/blogmanagement.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux-x86
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux-x86
-CND_ARTIFACT_NAME_Release=blog_management
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/blog_management
+CND_ARTIFACT_NAME_Release=blogmanagement
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/blogmanagement
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux-x86/package
 CND_PACKAGE_NAME_Release=blogmanagement.tar
 CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/blogmanagement.tar

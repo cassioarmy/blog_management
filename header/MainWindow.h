@@ -13,6 +13,8 @@
 #include "Utils.h"
 #include "PreferencesWindow.h"
 #include "TreeModelSelectedBlog.h"
+#include "BlogUtil.h"
+
 using namespace std;
 
 class MainWindow {
@@ -40,9 +42,15 @@ private:
     
     Glib::RefPtr<Gtk::ListStore>  m_refTreeModel;
     
-    TreeModelSelectedBlog selectedBlogModel;
+    TreeModelSelectedBlog selectedBlogModel;    
     
-    Gtk::ToolItem* selectedBlog ;
+    Gtk::ToolItem* itemCombo;
+    
+    string blogUrl;
+    
+    string user;
+    
+    string password;
 };
 
 #endif	/* MAINWINDOW_H */

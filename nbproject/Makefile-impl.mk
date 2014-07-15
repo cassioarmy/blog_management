@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=blog_management
+PROJECTNAME=BlogManagement
 
 # Active Configuration
 DEFAULTCONF=Debug
