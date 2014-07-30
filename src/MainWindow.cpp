@@ -10,7 +10,7 @@
 MainWindow::MainWindow(Glib::RefPtr<Gtk::Application> app) {
     this->blogUrl = "http://www.cassiosousa.com.br/blog/xmlrpc.php";
     this->user = "cassiosousa";
-    this->password = "86alexandre";
+    this->password = "";
     this->applicationWindow = app;
     createUI(app);
     loadComboBlogs();
