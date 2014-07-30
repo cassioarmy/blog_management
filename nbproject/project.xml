@@ -10,7 +10,6 @@
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
-                <sourceRootElem>header</sourceRootElem>
                 <sourceRootElem>src</sourceRootElem>
             </sourceRootList>
             <confList>
@@ -24,7 +23,10 @@
                 </confElem>
             </confList>
             <formatting>
-                <project-formatting-style>false</project-formatting-style>
+                <project-formatting-style>true</project-formatting-style>
+                <c-style>Linux|Linux</c-style>
+                <cpp-style>Linux|Linux</cpp-style>
+                <header-style>Linux|Linux</header-style>
             </formatting>
         </data>
     </configuration>

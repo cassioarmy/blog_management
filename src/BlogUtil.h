@@ -13,18 +13,19 @@
 #include <xmlrpc-c/client_simple.hpp>
 
 using namespace std;
+
 class BlogUtil {
 public:
-       
-    BlogUtil(string blogUrl,string,string);
+
+    BlogUtil(string blogUrl, string, string);
     virtual ~BlogUtil();
-    
-    map<int,string> getBlogs();
+
+    map<int, string> getBlogs();
 private:
     string blogUrl;
     string username;
     string password;
-    
+
     xmlrpc_c::value call(xmlrpc_c::paramList param, string operation);
 };
 

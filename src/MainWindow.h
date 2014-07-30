@@ -19,37 +19,37 @@ using namespace std;
 
 class MainWindow {
 public:
-    MainWindow(Glib::RefPtr<Gtk::Application> app);    
+    MainWindow(Glib::RefPtr<Gtk::Application> app);
     virtual ~MainWindow();
-    
-    
-    
+
+
+
 protected:
     void on_quit();
     void onPreferences();
-    
+
 private:
     void createUI(Glib::RefPtr<Gtk::Application> app);
     void loadComboBlogs();
-    
+
     Glib::RefPtr<Gtk::Application> applicationWindow;
-    
+
     Gtk::ComboBox comboBlogs;
-    
+
     Glib::RefPtr<Gtk::Builder> refBuilder;
-    
-    Gtk::ApplicationWindow* appWindow ;
-    
-    Glib::RefPtr<Gtk::ListStore>  m_refTreeModel;
-    
-    TreeModelSelectedBlog selectedBlogModel;    
-    
+
+    Gtk::ApplicationWindow* appWindow;
+
+    Glib::RefPtr<Gtk::ListStore> m_refTreeModel;
+
+    TreeModelSelectedBlog selectedBlogModel;
+
     Gtk::ToolItem* itemCombo;
-    
+
     string blogUrl;
-    
+
     string user;
-    
+
     string password;
 };
 

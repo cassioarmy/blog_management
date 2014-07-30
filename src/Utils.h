@@ -18,10 +18,10 @@ class Utils {
 public:
     Utils();
     virtual ~Utils();
-    
+
     static string getExecutablePath();
     static string getExecutableDirectory();
-    
+
 private:
 
 };

@@ -5,13 +5,12 @@
  * Created on July 11, 2014, 9:55 PM
  */
 
-#include "../header/MainWindow.h"
-
+#include "MainWindow.h"
 
 MainWindow::MainWindow(Glib::RefPtr<Gtk::Application> app) {
     this->blogUrl = "http://www.cassiosousa.com.br/blog/xmlrpc.php";
     this->user = "cassiosousa";
-    this->password = "";
+    this->password = "86alexandre";
     this->applicationWindow = app;
     createUI(app);
     loadComboBlogs();
@@ -70,7 +69,7 @@ void MainWindow::createUI(Glib::RefPtr<Gtk::Application> app) {
     Glib::RefPtr<Gdk::Screen> screen = Gdk::Screen::get_default();
 
     styleContext->add_provider_for_screen(screen, cssProvider, GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
-    
+
 
 }
 
@@ -80,23 +79,23 @@ void MainWindow::loadComboBlogs() {
     this->comboBlogs.set_model(m_refTreeModel);
 
 
-    BlogUtil blog((this->blogUrl),(this->user),(this->password));
-    map<int,string> blogs = blog.getBlogs();
-    
+    BlogUtil blog((this->blogUrl), (this->user), (this->password));
+    map<int, string> blogs = blog.getBlogs();
+
     int chave;
     string valor;
-    
+
     for (map<int, string>::iterator it = blogs.begin(); it != blogs.end(); ++it) {
         chave = it->first;
         valor = it->second;
         Gtk::TreeModel::Row row = *(m_refTreeModel->append());
         row[selectedBlogModel.id] = chave;
-        
-        
+
+
         //valor = valor.replace(valor.begin(),valor.end(),"&#039;","'");
         row[selectedBlogModel.label] = valor;
     }
-    
+
     //Gtk::TreeModel::Row row = *(m_refTreeModel->append());
     //row[selectedBlogModel.id] = 1;
     //row[selectedBlogModel.label] = "Teste";
@@ -122,7 +121,6 @@ void MainWindow::loadComboBlogs() {
     scrool->show_all();
      */
 }
-
 
 void MainWindow::on_quit() {
     this->applicationWindow->quit();

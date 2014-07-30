@@ -35,10 +35,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/header/BlogUtil.o \
-	${OBJECTDIR}/header/PreferencesWindow.o \
-	${OBJECTDIR}/header/TreeModelSelectedBlog.o \
+	${OBJECTDIR}/src/BlogUtil.o \
 	${OBJECTDIR}/src/MainWindow.o \
+	${OBJECTDIR}/src/PreferencesWindow.o \
+	${OBJECTDIR}/src/TreeModelSelectedBlog.o \
 	${OBJECTDIR}/src/Utils.o \
 	${OBJECTDIR}/src/main.o
 
@@ -79,35 +79,35 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/xmlrpc: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	g++ -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/xmlrpc ${OBJECTFILES} ${LDLIBSOPTIONS} -l xmlrpc_client++
 
-${OBJECTDIR}/header/BlogUtil.o: header/BlogUtil.cpp 
-	${MKDIR} -p ${OBJECTDIR}/header
+${OBJECTDIR}/src/BlogUtil.o: src/BlogUtil.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/gtkmm-3.0 -Isrc `pkg-config --cflags gtkmm-3.0`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/header/BlogUtil.o header/BlogUtil.cpp
-
-${OBJECTDIR}/header/PreferencesWindow.o: header/PreferencesWindow.cpp 
-	${MKDIR} -p ${OBJECTDIR}/header
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/gtkmm-3.0 -Isrc `pkg-config --cflags gtkmm-3.0`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/header/PreferencesWindow.o header/PreferencesWindow.cpp
-
-${OBJECTDIR}/header/TreeModelSelectedBlog.o: header/TreeModelSelectedBlog.cpp 
-	${MKDIR} -p ${OBJECTDIR}/header
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/gtkmm-3.0 -Isrc `pkg-config --cflags gtkmm-3.0`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/header/TreeModelSelectedBlog.o header/TreeModelSelectedBlog.cpp
+	$(COMPILE.cc) -g -I/usr/include/gtkmm-3.0 `pkg-config --cflags gtkmm-3.0`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/BlogUtil.o src/BlogUtil.cpp
 
 ${OBJECTDIR}/src/MainWindow.o: src/MainWindow.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/gtkmm-3.0 -Isrc `pkg-config --cflags gtkmm-3.0`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/MainWindow.o src/MainWindow.cpp
+	$(COMPILE.cc) -g -I/usr/include/gtkmm-3.0 `pkg-config --cflags gtkmm-3.0`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/MainWindow.o src/MainWindow.cpp
+
+${OBJECTDIR}/src/PreferencesWindow.o: src/PreferencesWindow.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/usr/include/gtkmm-3.0 `pkg-config --cflags gtkmm-3.0`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/PreferencesWindow.o src/PreferencesWindow.cpp
+
+${OBJECTDIR}/src/TreeModelSelectedBlog.o: src/TreeModelSelectedBlog.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/usr/include/gtkmm-3.0 `pkg-config --cflags gtkmm-3.0`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/TreeModelSelectedBlog.o src/TreeModelSelectedBlog.cpp
 
 ${OBJECTDIR}/src/Utils.o: src/Utils.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/gtkmm-3.0 -Isrc `pkg-config --cflags gtkmm-3.0`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Utils.o src/Utils.cpp
+	$(COMPILE.cc) -g -I/usr/include/gtkmm-3.0 `pkg-config --cflags gtkmm-3.0`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Utils.o src/Utils.cpp
 
 ${OBJECTDIR}/src/main.o: src/main.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/gtkmm-3.0 -Isrc `pkg-config --cflags gtkmm-3.0`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/main.o src/main.cpp
+	$(COMPILE.cc) -g -I/usr/include/gtkmm-3.0 `pkg-config --cflags gtkmm-3.0`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/main.o src/main.cpp
 
 # Subprojects
 .build-subprojects:

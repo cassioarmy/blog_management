@@ -8,7 +8,8 @@
 #include "TreeModelSelectedBlog.h"
 
 TreeModelSelectedBlog::TreeModelSelectedBlog() {
-    add(id);add(label);
+    add(id);
+    add(label);
 }
 
 TreeModelSelectedBlog::~TreeModelSelectedBlog() {
